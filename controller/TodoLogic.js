@@ -28,6 +28,7 @@ exports.createTodo = async (req, res) => {
       message: "Todo Item Is Inserted",
     });
   } catch (e) {
+    console.log(e)
     return res.status(500).json({
       success: false,
       message: e.message,
