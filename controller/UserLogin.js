@@ -20,7 +20,7 @@ exports.Signup = async (req, res) => {
       });
     }
 
-    const hashpassword = await bycrypt.hash(password, 10);
+    const hashpassword = await bcrypt.hash(password, 10);
     const UserSaved = await User.create({
       name,
       email,
